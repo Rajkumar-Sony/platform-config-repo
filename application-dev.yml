@@ -1,0 +1,11 @@
+logging:
+  level:
+    root: DEBUG
+
+security:
+  relaxed-mode: true
+
+test:
+  credentials:
+    username: testuser@example.com
+    password: test123
