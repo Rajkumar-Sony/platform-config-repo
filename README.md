@@ -1,4 +1,4 @@
-# cloud-drive-config
+# platform-config-repo
 
 Centralized Spring Cloud Config repository shared by multiple root projects.
 
@@ -19,7 +19,7 @@ Centralized Spring Cloud Config repository shared by multiple root projects.
 In a root project:
 
 ```bash
-git submodule add https://github.com/Rajkumar-Sony/cloud-drive-config.git cloud-drive-config
+git submodule add https://github.com/Rajkumar-Sony/platform-config-repo.git config-repo
 git submodule update --init --recursive
 ```
 
@@ -31,5 +31,5 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/Rajkumar-Sony/cloud-drive-config
+          uri: https://github.com/Rajkumar-Sony/platform-config-repo
 ```
