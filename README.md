@@ -8,6 +8,24 @@ Centralized Spring Cloud Config repository shared by multiple root projects.
 - Keep service code repositories free from runtime environment secrets.
 - Enable cross-project reuse by mapping this repository as a submodule.
 
+## AI Code Generation Prerequisite (`code-review-graph`)
+
+Install first if missing:
+
+```bash
+if ! command -v code-review-graph >/dev/null 2>&1; then
+  /usr/local/bin/python3.12 -m pip install --user code-review-graph
+  export PATH="$HOME/Library/Python/3.12/bin:$PATH"
+fi
+```
+
+Use during AI generation/review:
+
+```bash
+code-review-graph update
+code-review-graph detect-changes
+```
+
 ## Structure
 
 - `application.yml`: shared defaults
