@@ -1,0 +1,13 @@
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+
+spring:
+  datasource:
+    url: "{cipher}USER_SERVICE_DB_URL"
+    username: "{cipher}USER_SERVICE_DB_USERNAME"
+    password: "{cipher}USER_SERVICE_DB_PASSWORD"
+    driver-class-name: org.postgresql.Driver
+  flyway:
+    enabled: true
