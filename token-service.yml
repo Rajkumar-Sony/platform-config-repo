@@ -1,0 +1,12 @@
+spring:
+  datasource:
+    url: "{cipher}TOKEN_SERVICE_DB_URL"
+    username: "{cipher}TOKEN_SERVICE_DB_USERNAME"
+    password: "{cipher}TOKEN_SERVICE_DB_PASSWORD"
+    driver-class-name: org.postgresql.Driver
+  flyway:
+    enabled: true
+  cloud:
+    vault:
+      uri: http://localhost:8200
+      token: "{cipher}TOKEN_SERVICE_VAULT_TOKEN"
