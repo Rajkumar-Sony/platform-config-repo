@@ -1,0 +1,13 @@
+spring:
+  datasource:
+    url: "{cipher}ACCOUNT_SERVICE_DB_URL"
+    username: "{cipher}ACCOUNT_SERVICE_DB_USERNAME"
+    password: "{cipher}ACCOUNT_SERVICE_DB_PASSWORD"
+    driver-class-name: org.postgresql.Driver
+  flyway:
+    enabled: true
+  data:
+    mongodb:
+      uri: "{cipher}ACCOUNT_SERVICE_MONGODB_URI"
+  kafka:
+    bootstrap-servers: ${KAFKA_BOOTSTRAP_SERVERS:localhost:9092}
