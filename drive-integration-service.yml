@@ -1,0 +1,29 @@
+google:
+  drive:
+    client-id: "{cipher}DRIVE_INTEGRATION_GOOGLE_CLIENT_ID"
+    client-secret: "{cipher}DRIVE_INTEGRATION_GOOGLE_CLIENT_SECRET"
+    redirect-uri: "{cipher}DRIVE_INTEGRATION_GOOGLE_REDIRECT_URI"
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+
+resilience4j:
+  circuitbreaker:
+    configs:
+      default:
+        slidingWindowSize: 10
+        minimumNumberOfCalls: 5
+        failureRateThreshold: 50
+        waitDurationInOpenState: 10s
+  retry:
+    configs:
+      default:
+        maxAttempts: 3
+        waitDuration: 200ms
+
+management:
+  zipkin:
+    tracing:
+      endpoint: ${ZIPKIN_ENDPOINT:http://localhost:9411/api/v2/spans}
